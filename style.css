@@ -1,0 +1,14 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 200px;
+    font-size: 1em;
+    background-color: rgb(200, 171, 229);
+}
+.quote-container{
+    color: rgb(49, 4, 73);
+    font-size: 3em;
+
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="main-container">
+        <h1>Motivational Quotes</h1>
+    <div id="result"class="quote-container">
+        
+    </div>
+    
+    <script>
+         
+        function fetch_data(){
+            fetch("https://type.fit/api/quotes")
+           .then((response) => {
+                       return response. json();
+                      })
+           .then((data) => {
+                     var b=Math.floor(Math.random()*1643);
+                     console. log(data[b].text);
+                    var a=data[b].text;
+                    document.getElementById('result').innerHTML=a;
+                    })
+                   
+        }
+        fetch_data();
+        setTimeout(function() {location.reload();}, 1000);
+  </script>
+  </div>
+</body>
+</html>
